@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<div class="card">
+  <div class="row">
+      <div class="col-md-8 cart">
+          <div class="title">
+              <div class="row">
+                  <div class="col-9"><h4><b>Shopping Cart</b></h4></div>
+                  <!-- <div class="col"><p (click)="Clear()"  class="text-danger">Clear Cart</p></div> -->
+              </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Product Details</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cart.cartItems">
+                <td><img class="img-fluid" [src]="item.imageUrl" alt="{{item.name}}"></td>
+                <td>
+                  <div>{{item.name}}</div>
+                  <div class="text-muted">{{item.category}}</div>
+                </td>
+                <td>
+                  <!-- <input class="form-control" type="number" [(ngModel)]="item.quantity" (click)="updateQuantity(item, item.quantity)" /> -->
+                    <!-- cart.component.html -->
+<input class="form-control" type="number" [(ngModel)]="item.quantity" (ngModelChange)="updateQuantity(item, $event)" />
+                </td>
+                <td>{{item.price}} &pound;</td>
+                <td>{{item.price * item.quantity}} &pound;</td>
+                <td>
+                  <i  (click)="removeProduct(item.id)" class="fa-solid fa-trash-can" style="color: #eb0000; cursor: pointer;"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="back-to-shop"><a [routerLink]="['/product']">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+      </div>
+      <div class="col-md-4 summary">
+          <div><h5><b>Summary</b></h5></div>
+          <hr>
+          <div class="row">
+              <div class="col" style="padding-left:0;">{{totalQuantity}} Items</div>
+              <div class="col text-right">{{totalPrice.toFixed(2)}}&pound;</div>
+          </div>
+          <form>
+              <p>SHIPPING</p>
+              <select [(ngModel)]="selectedMethodId" (change)="onMethodSelected()">
+                <option value="">Select a delivery method</option>
+                <option *ngFor="let method of deliveryMethods" [value]="method.id">{{ method.deliveryTime }} - Cost: {{ method.cost }}&pound;</option>
+              </select>
+              <p>GIVE CODE</p>
+              <input id="code" placeholder="Enter your code">
+          </form>
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+              <div class="col">TOTAL PRICE</div>
+              <div class="col text-right">{{totalPrice.toFixed(2)}}&pound;</div>
+          </div>
+          <button class="btn">CHECKOUT</button>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,12 @@
+.gradient-custom {
+  background: url('src/assets/Images/Blog.jpg') no-repeat;
+  background-size: cover;
+
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
+.overlay-content{
+  opacity: 0.93;
+}
+p{
+  font-size: 20px;
+}

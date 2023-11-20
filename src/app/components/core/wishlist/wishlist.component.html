@@ -1,0 +1,33 @@
+<!-- wishlist.component.html -->
+<div class="wishlist-container">
+  <div class="wishlist-item" *ngFor="let product of wishlist">
+    <p>{{ product.name }}</p>
+    <button (click)="removeFromWishlist(product)">Remove</button>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let P of wishlist">
+      <div class="product">
+        <img [src]="P.imageUrl" alt="">
+        <h3>{{P.name}}</h3>
+        <div class="price">{{P.price}}&pound;</div>
+        <div class="category">{{P.category}}</div>
+        <div class="product-icon-btns">
+          <a >
+            <i class="far fa-heart"></i>
+            <span class="product-tooltip">wishlist</span>
+          </a>
+          <a>
+            <i class="fas fa-search"></i>
+            <span class="product-tooltip">quick view</span>
+          </a>
+          <a>
+            <i class="fas fa-cart-plus"></i>
+            <span class="product-tooltip">add to cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

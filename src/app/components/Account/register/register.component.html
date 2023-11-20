@@ -1,0 +1,256 @@
+<div
+  class="wrapper"
+  style="background-image: url('assets/Images/Register-img.jpg')"
+>
+  <div class="inner">
+    <form
+      action="#"
+      [formGroup]="regitretionform"
+      (ngSubmit)="onregister(regitretionform)"
+      method="post"
+    >
+      <!-- Add method and action attributes -->
+      <h3>Welcome on our Taza-Food</h3>
+      <div class="form-group">
+        <div class="form-wrapper">
+          <label for="FirstName">First Name:</label>
+          <div class="form-holder">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="FirstName"
+              id="FirstName"
+              name="FirstName"
+            />
+          </div>
+          <div
+            *ngIf="
+              regitretionform.get('FirstName')?.errors != null &&
+              regitretionform.get('FirstName')?.touched
+            "
+            class="text-danger"
+          >
+            <p *ngIf="regitretionform.get('FirstName')?.errors?.['required']">
+              this input is required
+            </p>
+            <p *ngIf="regitretionform.get('FirstName')?.errors?.['minlength']">
+              the Name must be more than 5
+            </p>
+            <p *ngIf="regitretionform.get('FirstName')?.errors?.['maxlength']">
+              the Name must be less than 15
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <label for="last-name">Last Name:</label>
+          <div class="form-holder">
+            <input
+              formControlName="LastName"
+              class="form-control"
+              type="text"
+              id="LastName"
+            />
+          </div>
+          <div
+            *ngIf="
+              regitretionform.get('LastName')?.errors != null &&
+              regitretionform.get('LastName')?.touched
+            "
+            class="text-danger"
+          >
+            <p *ngIf="regitretionform.get('LastName')?.errors?.['required']">
+              *this input is required
+            </p>
+            <p *ngIf="regitretionform.get('LastName')?.errors?.['minlength']">
+              *the Name must be more than 5
+            </p>
+            <p *ngIf="regitretionform.get('LastName')?.errors?.['maxlength']">
+              *the Name must be less than 15
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-wrapper">
+          <label for="Email">Email:</label>
+          <div class="form-holder">
+            <input
+              formControlName="Email"
+              type="text"
+              class="form-control"
+              id="Email"
+            />
+            <div
+              *ngIf="
+                regitretionform.get('Email')?.errors != null &&
+                regitretionform.get('Email')?.touched
+              "
+              class="text-danger"
+            >
+              <p *ngIf="regitretionform.get('Email')?.errors?.['required']">
+                *this input is required
+              </p>
+              <p *ngIf="regitretionform.get('Email')?.errors?. ['email']">
+                *contin(aaa.COM)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <label for="Password">Password:</label>
+          <div class="form-holder">
+            <input
+              formControlName="Password"
+              type="text"
+              class="form-control"
+              id="Password"
+            />
+            <div
+              *ngIf="
+                regitretionform.get('Password')?.errors != null &&
+                regitretionform.get('Password')?.touched
+              "
+              class="text-danger"
+            >
+              <p *ngIf="regitretionform.get('Password')?.errors?.['required']">
+                *this input is required
+              </p>
+              <p *ngIf="regitretionform.get('Password')?.errors?.['minlength']">
+                *the Name must be more than 5
+              </p>
+              <p *ngIf="regitretionform.get('Password')?.errors?.['maxlength']">
+                *the Name must be less than 15
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="display: flex; gap: 10px">
+        <div class="form-wrapper" style="flex: 1">
+          <label for="country">Country:</label>
+          <div class="form-holder">
+            <input
+              type="text"
+              formControlName="Country"
+              class="form-control"
+              id="country"
+              name="country"
+              style="width: 100%"
+            />
+          </div>
+          <div
+            *ngIf="
+              regitretionform.get('Country')?.errors != null &&
+              regitretionform.get('Country')?.touched
+            "
+            class="text-danger"
+          >
+            <p *ngIf="regitretionform.get('Country')?.errors?.['required']">
+              *Please Enter a country
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper" style="flex: 1">
+          <label for="city">City:</label>
+          <div class="form-holder">
+            <input
+              formControlName="City"
+              type="text"
+              class="form-control"
+              id="city"
+              name="city"
+              style="width: 100%"
+            />
+          </div>
+          <div
+            *ngIf="
+              regitretionform.get('City')?.errors != null &&
+              regitretionform.get('City')?.touched
+            "
+            class="text-danger"
+          >
+            <p *ngIf="regitretionform.get('City')?.errors?.['required']">
+              Please Enter a city
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper" style="flex: 1">
+          <label for="street">Street:</label>
+          <div class="form-holder">
+            <input
+              type="text"
+              formControlName="Street"
+              class="form-control"
+              id="street"
+              name="street"
+              style="width: 100%"
+            />
+          </div>
+          <div
+            *ngIf="
+              regitretionform.get('Street')?.errors != null &&
+              regitretionform.get('Street')?.touched
+            "
+            class="text-danger"
+          >
+            <p *ngIf="regitretionform.get('Street')?.errors?.['required']">
+              this input is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-wrapper">
+          <label for="PhoneNumber">PhoneNumber:</label>
+          <div class="form-holder">
+            <input
+              formControlName="PhoneNumber"
+              type="text"
+              class="form-control"
+              id="PhoneNumber"
+            />
+            <div
+              *ngIf="
+                regitretionform.get('PhoneNumber')?.errors != null &&
+                regitretionform.get('PhoneNumber')?.touched
+              "
+              class="text-danger"
+            >
+              <p
+                *ngIf="regitretionform.get('PhoneNumber')?.errors?.['required']"
+              >
+                *this input is required
+              </p>
+
+              <p
+                *ngIf="regitretionform.get('PhoneNumber')?.errors?.['maxlength']"
+              >
+                *the number must be eqal 11 number
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <label style="color: #f6f6fb">e</label>
+          <div class="form-holder">
+            <button [disabled]="regitretionform.invalid">
+              <span *ngIf="isloading"
+                ><i
+                  class="fas fa-spinner fa-spin text-light"
+                  style="text-align: center"
+                ></i
+              ></span>
+              <span *ngIf="!isloading">Register Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="errormessege" class="alert alert-danger mt-2">
+        {{ errormessege }} you can login if you have already account
+        <a routerLink="/login" type="button" class="btn btn-danger mx-2"
+          >Login</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container-fluid">
+    <img src="assets/Images/1.png" alt="" style=  "  height: 70px;
+    width: 135px;" />
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="islogin" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-solid fa-house-chimney"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="islogin" [routerLink]="['/product']" routerLinkActive="active"><i
+                class="fa-brands fa-product-hunt"></i><span>Products</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="islogin" [routerLink]="['/wishlist']" routerLinkActive="active"><i
+                class="fa-solid fa-heart"></i><span>WishList</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="islogin" [routerLink]="['/cart']" routerLinkActive="active"><i
+                class="fa-solid fa-cart-shopping"></i><span>{{cartItemCount}}</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav" id="End">
+          <li class="nav-item">
+            <a href="https://api.whatsapp.com/send?phone=+201062103267&text=Hello%20I%20would%20like%20to%20connect" target="_blank" rel="noopener noreferrer"*ngIf="islogin">
+              <button class="btn btn-sm whatsapp-button rounded-3" *ngIf="islogin">
+                <i class="fa-solid fa-phone" ></i> +201062103267
+              </button>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-5" [routerLink]="['/account']" routerLinkActive="active"
+              id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-solid fa-user "></i><span>Account</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" *ngIf="!islogin" [routerLink]="['/login']" routerLinkActive="active">
+                  <p>Login</p>
+                </a></li>
+              <li><a class="dropdown-item" *ngIf="!islogin" [routerLink]="['/register']" routerLinkActive="active">
+                  <p>Register</p>
+                </a></li>
+                <li><a class="dropdown-item" [routerLink]="['/home']"  (click)="Logout()" routerLinkActive="active" *ngIf="islogin">
+                  <p>log out</p>
+                </a></li>
+            </ul>
+            <li class="nav-item d-flex align-items-center">
+              <label for="sortBy" class="me-2" style="width:6rem;">Sort By:</label>
+              <select id="sortBy" class="form-control">
+                <option value="">None</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="rate">Rate</option>
+              </select>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+</nav>

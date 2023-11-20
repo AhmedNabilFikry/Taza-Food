@@ -1,0 +1,54 @@
+<!-- <div class="content">
+  <div mat-dialog-title> Add New Product</div>
+  <form [formGroup]="prodform" (ngSubmit)="onformsubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product Name</mat-label>
+      <input matInput type="text" formControlName="ProductName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product Rate</mat-label>
+      <input matInput type="text" formControlName="Productrate">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="Description"></textarea>
+    </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Product Price</mat-label>
+        <input matInput type="text" formControlName="Productprice">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+          <mat-select formControlName="category" >
+        <mat-option *ngFor="let cate of categories" [value]="cate.id">{{ cate.name }}</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <div class="row g-2 align-items-center">
+        <div class="col">
+          <div class="form-floating">
+
+            <input type="file" class="form-control" id="images" placeholder="images" formControlName="images" (change)="AssignImage($event)">
+
+            <label for="images">Product Images</label>
+          </div>
+        </div>
+        </div>
+
+      <label for="">Category</label>
+      <select class="form-select" id="brandID" formControlName="category">
+        <option *ngFor="let brand of categories" [value]="brand.id">{{ brand.name }}</option>
+      </select>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button style="background-color: rgb(255, 144, 70 );" type="submit" >Save</button>
+  </div>
+  </form>
+  </div> -->

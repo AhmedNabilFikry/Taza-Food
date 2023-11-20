@@ -1,0 +1,43 @@
+<section class="gradient-custom">
+  <div class="container py-3 overlay-content">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body px-4 py-5">
+            <div id="carouselDarkVariant" class="carousel slide carousel-dark" data-bs-ride="carousel">
+
+              <div class="carousel-inner pb-5">
+                <div class="carousel-item" [class.active]="i === activeSlideIndex" *ngFor="let review of reviews; let i = index">
+                  <div class="row d-flex align-items-center justify-content-center h-100 animate_animated animate_slideInRight">
+                    <div class="col-lg-10 col-xl-8">
+                      <div class="row">
+                        <div class="col-12 text-center text-lg-start">
+                          <h3 class="text-center" style="color: rgb(255, 144, 70);;">{{ review.userName }}</h3>
+                          <i class="fas fa-quote-left pe-2"></i>
+                          <p class="text-center">{{ review.content|contentwordsPipe: 25 }}</p>
+                          <i class="fas fa-quote-right pe-2" style="float: right;"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inner -->
+
+              <!-- Controls -->
+              <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" (click)="nextSlide()">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- Carousel wrapper -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

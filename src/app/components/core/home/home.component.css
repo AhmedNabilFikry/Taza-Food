@@ -1,0 +1,167 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.atf-about-icon{
+  font-size: 40px;
+  margin-top: 25px;
+  margin-right: 22px;
+  color: #fa7e1e;
+}
+.atf-about-content:hover{
+  border: 1px solid rgb(255, 144, 70);
+  cursor: pointer;
+  border-radius: 4px;
+  transform: scale(1.05);
+}
+ .atf-about-content {
+  margin-top: 14px;
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeIn;
+  padding: 30px 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.title h2{
+  color: gray;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* TopRated Section */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  position: relative;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+}
+
+.product h6 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #444;
+}
+.product:hover h5 {
+ color: #ff9046;
+}
+.product .price {
+  font-weight: bold;
+  color: #444;
+}
+
+.product .category {
+  font-style: italic;
+  color: #888;
+  font-weight: bold;
+}
+.product:hover {
+  transform: scale(1.05);
+  border: 1px solid rgb(255, 144, 70);
+
+
+}
+
+.product-icon-btns{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.product-icon-btns a{
+  height: 40px;
+  width: 40px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 5px hsl(0, 0%, 88%);
+  font-size: 20px;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: hsl(0, 0%, 30%);
+  transition:all 0.3s ease ;
+  position: relative;
+}
+
+.product:hover .product-icon-btns a:nth-child(2){
+  transition-delay: 0.1s;
+}
+.product:hover .product-icon-btns a:nth-child(3){
+  transition-delay: 0.2s;
+}
+.product-icon-btns a:hover .fa-heart{
+  color: rgb(194, 20, 20)
+}
+.product-icon-btns a:hover .fa-search{
+  color: rgb(131, 130, 130)
+}
+.product-icon-btns a:hover .fa-cart-plus{
+  color: rgb(255, 144, 70)
+}
+@media(min-width: 992px){
+  .product-icon-btns a{
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  .product:hover .product-icon-btns a{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.product-tooltip{
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 95%);
+   font-size: 12px;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  white-space: nowrap;
+  opacity: 0;
+  /* pointer-events: none; */
+  transition: all 0.3s ease;
+}
+
+.product-tooltip::before{
+content: '';
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+border-width: 6px;
+border-style: solid;
+border-color: transparent transparent transparent hsl(0, 0%, 20%) ;
+}
+
+@media(min-width:992px){
+  .product-icon-btns a:hover .product-tooltip{
+      opacity: 1;
+      transform: translate(-10px , -50%);
+      }
+}
+

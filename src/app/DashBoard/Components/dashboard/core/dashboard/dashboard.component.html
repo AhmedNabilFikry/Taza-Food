@@ -1,0 +1,61 @@
+
+<section style="padding-top: 50px;">
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-lg-4 col-12 col-md-6 atf-main-about text-left" [routerLink]="['/category']">
+        <div class="atf-about-content wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
+          <div class="atf-single-about d-flex">
+            <div class="atf-about-icon text-left"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="atf-about-text">
+              <h2>CATEGORIES</h2>
+              <h1>{{categories.length}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12 col-md-6 atf-main-about text-left" [routerLink]="['/allproducts']">
+        <div class="atf-about-content wow fadeIn"   data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
+          <div class="atf-single-about d-flex">
+            <div class="atf-about-icon text-left"><i class="fa-brands fa-product-hunt"></i></div>
+            <div class="atf-about-text">
+              <h2>PRODUCTS</h2>
+              <h1>{{products.length}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12 col-md-6 atf-main-about text-left" [routerLink]="['/users']">
+        <div class="atf-about-content wow fadeIn"  data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+          <div class="atf-single-about d-flex">
+            <div class="atf-about-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="atf-about-text">
+              <h2>USERS</h2>
+              <h1>{{users.length}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+<div class="contanier">
+
+  <h2 style="color: #828282;">List of Orders</h2>
+  <table class="table caption-top">
+    <thead>
+      <tr>
+        <th scope="col" class="theader">ID</th>
+        <th scope="col" class="theader">Email</th>
+        <th scope="col" class="theader">orders</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{order.email}}</td>
+        <td>{{order.orders}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>

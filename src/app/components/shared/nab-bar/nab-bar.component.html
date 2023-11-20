@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container-fluid">
+    <img src="assets/Images/1.png" alt="" style=  "  height: 70px;
+    width: 135px;" />
+    <i class="fa-solid fa-server" *ngIf="showdashbord" style="color: #858585; font-size: larger; cursor: pointer;"  [routerLink]="['/dash']"></i>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-solid fa-house-chimney"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/product']" routerLinkActive="active"><i
+                class="fa-brands fa-product-hunt"></i><span>Products</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/wishlist']" routerLinkActive="active"><i
+                class="fa-solid fa-heart"></i><span>{{ wishlistCount }}</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="active"
+              ><i class="fa-solid fa-cart-plus fa-lg" style="color: #828282"></i
+              ><span class="badge badge-warning" id="lblCartCount">
+                {{ cartItemCount }}
+              </span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav" id="End">
+          <li class="nav-item">
+            <a href="https://api.whatsapp.com/send?phone=+201062103267&text=Hello%20I%20would%20like%20to%20connect" target="_blank" rel="noopener noreferrer"*ngIf="islogin">
+              <button class="btn btn-sm whatsapp-button rounded-3" >
+                <i class="fa-solid fa-phone" ></i>
+              </button>
+            </a>
+          </li>
+          <li>
+          <div ngbDropdown class="dropdown">
+            <button ngbDropdownToggle class="btn btn-secondary" type="button" id="dropdownMenuButton1" aria-expanded="false"
+            [routerLink]="['/account']" routerLinkActive="active"
+            >
+            <i class="fa-solid fa-user "></i><span>Account</span>
+          </button>
+            <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+              <li><a ngbDropdownItem  *ngIf="!islogin" [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
+              <li><a ngbDropdownItem  *ngIf="!islogin" [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+              <li><a ngbDropdownItem  *ngIf="islogin" [routerLink]="['/home']"  (click)="Logout()" routerLinkActive="active">Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+</nav>

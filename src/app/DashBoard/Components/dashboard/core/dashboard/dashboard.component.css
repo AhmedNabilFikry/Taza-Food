@@ -1,0 +1,46 @@
+
+
+.btn{
+  background-color: rgb(255, 144, 70);
+
+ }
+
+ .btn:hover{
+   background-color: #828282;
+   color: #fff;
+ }
+
+ .contanier{
+  align-items: center;
+  padding: 5%;
+}
+
+.theader{
+  background-color: rgb(255, 144, 70);
+  color: #fff;
+}
+.atf-about-icon{
+  font-size: 40px;
+  margin-top: 25px;
+  margin-right: 22px;
+  color: #fa7e1e;
+}
+.atf-about-content:hover{
+  background-color:#fa7e1e;
+  color: white;
+  cursor: pointer;
+}
+.atf-single-about:hover .atf-about-icon {
+  color: white;
+ }
+ .atf-about-content {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: fadeIn;
+  padding: 30px 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}

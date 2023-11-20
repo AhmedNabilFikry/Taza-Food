@@ -1,0 +1,34 @@
+<!--
+<div class="contanier">
+  <button type="button" class="btn" style="color: #fff;" (click)="openaddnewproduct()" >Add Proudect</button>
+  <h2 style="color: gray;">List of Products</h2>
+
+  <table class="table table-striped">
+  <caption></caption>
+  <thead>
+    <tr>
+      <th scope="col" class="theader">ID</th>
+      <th scope="col" class="theader">Name</th>
+      <th scope="col" class="theader">price</th>
+      <th scope="col" class="theader">Rate</th>
+      <th scope="col" class="theader">category</th>
+      <th scope="col" class="theader">Descrabtion</th>
+      <th scope="col" class="theader">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of products; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{prod.name}}</td>
+      <td>{{prod.price}}</td>
+      <td>{{prod.rate}}</td>
+      <td>{{prod.category}}</td>
+      <td>{{prod.description}}</td>
+      <td>
+          <i class="bi text-warning fs-4 bi-pencil-square" ></i>
+          <i class="bi text-danger fs-4 bi-trash" (click)="delete(prod.id)" ></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> -->

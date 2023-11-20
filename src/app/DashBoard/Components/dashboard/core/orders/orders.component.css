@@ -1,0 +1,28 @@
+
+
+.btn{
+  background-color: rgb(255, 144, 70);
+
+ }
+
+ .btn:hover{
+   background-color: #828282;
+   color: #fff;
+ }
+
+ .contanier{
+  align-items: center;
+  padding: 5%;
+}
+
+.theader{
+  background-color: rgb(255, 144, 70);
+  color: #fff;
+}
+
+caption{
+  font-size: large;
+}
+h2{
+  color: #828282;
+}

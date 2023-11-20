@@ -1,0 +1,75 @@
+#icontohome{
+
+  padding-left: 20px;
+
+  font-size: larger;color:#98999a ;
+  cursor: pointer;
+}
+
+
+
+.card{
+
+  border: 1px solid rgb(129, 129, 129);
+  margin-top: 56px;
+  margin-bottom: 35px;
+  border: none;
+  height: 415px;
+  width: 750px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+img{
+  width: 320px;
+  height: 257px;
+  /* max-height: min-content; */
+  /* max-width: max-content; */
+  width: 296px;
+  padding-left: 23px;
+  cursor: pointer;
+  height: 300px;
+}
+input {
+  width: 18%;
+  border: 1px solid gray;
+  border-radius: 4px;
+  height: 34px;
+}
+
+.col-3{
+    width: 50%;
+}
+p{
+  color: #545252;
+  font-size: 20px;
+    margin-bottom: 6px;
+}
+h1,h2,h3,h4,h5,h6{
+  color: #545252;
+}
+
+
+button:hover{
+
+      background-color: rgb(250, 113, 22);
+}
+.description{
+  padding-left: 17px;
+}
+ngb-rating {
+  color:rgb(250, 113, 22);
+  font-size: 20px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<div class='container'>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header"><i class="fas fa-times-circle close-icon" style="color: red; cursor: pointer;" (click)="modal.close()"></i>
+              </div>
+              <div class="modal-body p-0 row">
+                  <div class="col-12 col-lg-5 ad p-0"> <img [src]="product.imageUrl"/> </div>
+                  <div class="details col-12 col-lg-7">
+                      <h2>{{product.name}}</h2>
+                      <p><small class="para">{{product.price}}&pound;</small></p>
+                      <div>
+                        <ngb-rating [max]="5" [(rate)]="product.rate" [disabled]="true"></ngb-rating>
+                      </div>
+                      <p><small class="para">{{product.category}}</small></p>
+                      <p><small class="para">{{product.description}}</small></p>
+                      <div class="row" style="margin-top: 20px;">
+                        <div class="col btn-link ">
+                            <button *ngIf="!ShowButton" (click)="ShowButton = true" class="btn btn-secondary" >Add To Cart<i class="fas fa-shopping-cart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                            <div *ngIf="ShowButton" class="input-row">
+                              <input type="number" name="quantity" [(ngModel)]="productQuantity" placeholder="Enter something" >
+                              <button class="btn btn-secondary" (click)="AddToCart();ShowButton = false" style="margin-left: 10px; padding: 12px;">Add</button>
+                            </div>
+                          <button class="btn btn-secondary" style="margin-left: 10px;">Wish<i class="fa-solid fa-heart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                          <button class="btn btn-secondary" style="margin-left: 10px;">Buy<i class="fas fa-cart-plus" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+

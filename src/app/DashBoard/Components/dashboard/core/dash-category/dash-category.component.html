@@ -1,0 +1,27 @@
+<div class="contanier">
+  <button type="button" class="btn" (click)="openaddnewcategory()" style="color: #fff;" >Add category</button>
+ <br>
+ <h2>List of Categories</h2>
+  <table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col" class="theader">NO</th>
+      <th scope="col" class="theader">Name</th>
+      <th scope="col" class="theader">Description</th>
+      <th scope="col" class="theader">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let cate of categoyies; let i = index" >
+        <th scope="row">{{i+1}}</th>
+        <td>{{cate.name}}</td>
+        <td>{{cate.description}}</td>
+        <td>
+          <i class="bi text-warning fs-4 bi-pencil-square" (click)="openeditcategory(cate.id)"></i>
+          <i class="bi text-danger fs-4 bi-trash" (click)="delete(cate.id)" ></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

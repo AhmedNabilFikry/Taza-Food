@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container-fluid">
+    <img src="assets/Images/1.png" alt="" />
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-solid fa-house-chimney"></i><span>Dashboard</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/category']" routerLinkActive="active">
+              <i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/orders']" routerLinkActive="active">
+              <i class="fa-solid fa-bowl-food"></i><span>Orders</span></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/allproducts']" routerLinkActive="active"><i
+                class="fa-brands fa-product-hunt"></i><span>Products</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/users']" routerLinkActive="active">
+              <i class="fa-solid fa-users"></i><span>Users</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav" id="End">
+          <!-- <li class="navbar-item">
+            <a class="nav-link" [routerLink]="['/massage']" routerLinkActive="active">
+              <i class="fa-solid fa-envelope"></i></a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" [routerLink]="['/alart']" routerLinkActive="active">
+              <i class="fa-solid fa-bell"></i></a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-5" [routerLink]="['/account']" routerLinkActive="active"
+              id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-solid fa-user "></i><span>Admin </span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" [routerLink]="['/logout']" routerLinkActive="active">
+                  <p>Logout</p>
+                </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,198 @@
+.site-footer {
+  padding-top: 25px;
+  background-color: rgb(255, 144, 70);
+
+  font-size: 15px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.site-footer hr {
+  border-top-color: #f0f0f0;
+  opacity: 0.5
+}
+
+.site-footer hr.small {
+  margin: 20px 0
+}
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px
+}
+
+.site-footer a {
+  color: #737373;
+}
+
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none
+}
+
+.footer-links li {
+  display: block
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255)
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: rgb(121, 120, 120);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-links.inline li {
+  display: inline-block
+}
+
+.site-footer .social-icons {
+  text-align: right
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+
+  border-radius: 100%;
+  background-color: #ffffff
+}
+
+.copyright-text {
+  margin: 7px;
+}
+
+.copyright-text a {
+  color: #eceeef;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.copyright-text a:hover {
+  color: #797979;
+
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
+      margin-bottom: 30px
+  }
+}
+
+@media (max-width:767px) {
+  .site-footer {
+      padding-bottom: 0
+  }
+
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+      text-align: center
+  }
+}
+
+.social-icons {
+  padding-left: 0;
+  margin: auto;
+  margin-top: 3px;
+  list-style: none
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px
+}
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: lowercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px
+}
+
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 100px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear
+}
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px
+}
+
+
+@media (max-width:767px) {
+  .social-icons li.title {
+      display: block;
+      margin-right: 0;
+      font-weight: 600
+  }
+}
+
+#bbakeground {
+  background-color: rgb(244, 114, 28);
+}
+
+#logo-footer {
+
+  height: 120px;
+  width: 125px;
+  /* transform: rotate(-25deg); */
+}
+
+
+#contact{
+
+  padding: 21px;
+  border-style: unset;
+  border-radius: 25px;
+  height: 43px;
+  width: 223px;
+
+}
+#contact1{
+  border-radius: 20px;
+ border: none;
+
+  height: 41px;
+  color: white;
+  background-color:  rgb(244, 114, 28);;
+  width: 83px;
+}
+#contact:focus {
+  outline: none; /* Removes the default focus outline */
+  background-color: lightgray; /* Changes the background color when focused */
+}
+#contact::placeholder{
+font-size: 18px;
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+      <nav class="d-flex  align-items-center" style="height: 18px; padding-top: 10px;">
+          <i id="icontohome" class="fa-solid fa-house"  routerLink="/product"></i>
+      </nav>
+      <hr>
+      <div class="row">
+          <div class=" col-md-5">
+              <div class="photo">
+                  <img src="{{ Product?.imageUrl }}" class="mt-3 img-fluid">
+              </div>
+          </div>
+          <div class=" col-md-7">
+              <div class="description">
+                  <h3>{{ Product.name }}</h3>
+                  <p><b>{{ Product.category }}</b></p>
+                  <p>{{ Product.price }}&pound;</p>
+                  <p><b> Rate:<ngb-rating [max]="5" [rate]="Product.rate" [readonly]="false"></ngb-rating></b></p>
+                  <p>{{ Product.description|slice:0:100}}</p>
+                  <div class="row" style="margin-top: 20px;">
+                    <div class="col btn-link ">
+                        <!-- <button *ngIf="!ShowButton" (click)="ShowButton = true" class="btn btn-secondary" >Add To Cart<i class="fas fa-shopping-cart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                        <div *ngIf="ShowButton" class="input-row">
+                          <input type="number" name="quantity" [(ngModel)]="productQuantity" placeholder="Enter something" >
+                          <button class="btn btn-secondary" (click)="AddToCart();ShowButton = false" style="margin-left: 10px; padding: 12px;">Add</button>
+                        </div>
+                      <button class="btn btn-secondary" style="margin-left: 10px;">Wish<i class="fa-solid fa-heart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                      <button class="btn btn-secondary" style="margin-left: 10px;">Buy<i class="fas fa-cart-plus" style="color: #a1a1a1; padding-left: 12px"></i></button> -->
+                      <input type="number" name="quantity" [(ngModel)]="productQuantity" placeholder="Enter something"  >
+                        <button (click)="AddToCart()" class="btn btn-secondary" style="margin-left: 10px;" >Add to cart<i class="fa-solid fa-heart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                        <button class="btn btn-secondary" style="margin-left: 10px;">Buy<i class="fa-solid fa-heart" style="color: #a1a1a1; padding-left: 12px"></i></button>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>

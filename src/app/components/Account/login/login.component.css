@@ -1,0 +1,101 @@
+.login-block {
+  background: #de6262; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffb88c,
+    #de6262
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffb88c,
+    #ff5252
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  float: left;
+  width: 100%;
+  padding: 50px 0;
+}
+.banner-sec {
+  background: url("src/assets/Images/Login-img.jpg")
+    no-repeat left bottom;
+  background-size:cover;
+  min-height: 580px;
+  border-radius: 0 10px 10px 0;
+  padding: 0;
+}
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-sec {
+  padding: 50px 30px;
+  position: relative;
+}
+
+.login-sec .copy-text i {
+  color: #feb58a;
+}
+.login-sec .copy-text a {
+  color: #e36262;
+}
+.form-group{
+  margin-top: 10px;
+}
+.login-sec h2 {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #ff8282;
+}
+.login-sec h2:after {
+  content: " ";
+  width: 120px;
+  height: 3px;
+  background: #feb58a;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-login {
+  margin-top: 20px;
+  background: #de6262;
+  color: #fff;
+  font-weight: 600;
+}
+.form-group label{
+  color: #8b8b8b;
+}
+/* Form input style */
+.form-control {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  margin-bottom: 15px; /* Increased margin */
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Error message style */
+.text-danger {
+  color: #ff0000; /* Red error text */
+  margin-top: 5px; /* Adjusted margin */
+  font-size: 14px; /* Error text size */
+}
+
+/* Animation for error messages */
+.text-danger p {
+  animation: slideUp 0.3s ease; /* Example animation */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

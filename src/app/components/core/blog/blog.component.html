@@ -1,0 +1,36 @@
+<section id="atf-pro-about" class="atf-section-padding">
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-6 col-12">
+        <div class="title">
+          <h2 class="text-center text-capitalize mb-3">Recipes</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-3 col-md-4 col-sm-6 col-12"
+        style="padding: 2px"
+        *ngFor="let P of topRatedProducts"
+      >
+        <div class="product" (click)="DisplayProductDetails(P.id)">
+          <div class="image-wrapper">
+            <div class="image-overlay"></div>
+            <img [src]="P.imageUrl" alt="" class="product-img" />
+            <p class="productName">{{ P.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <button
+          class="btn read-more text-center"
+          (click)="goToProductspage()"
+        >
+          Read More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
